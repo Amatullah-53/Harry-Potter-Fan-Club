@@ -1,0 +1,231 @@
+body {
+    text-align: center; /* Center the content */
+    margin: 0; /* Remove default margin */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    position: relative; /* Required for positioning the pseudo-element */
+    z-index: 1; /* Ensures that content is above the pseudo-element */
+  
+
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Fixed to cover the entire viewport */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('Images/library2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+   
+    z-index: -1; /* Places the pseudo-element behind the content */
+    animation: zoomInOut 20s infinite alternate ease-in-out; /* Applying the animation */
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Initial state */
+    }
+    100% {
+        transform: scale(1.5); /* Zoom in effect */
+    }
+}
+
+
+#forum {
+    background: linear-gradient(to right, rgba(68, 30, 2, 0.7), rgba(8, 0, 0, 0.5));
+
+    /* Adding shadow: offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 5px 4px 28px rgba(251, 220, 97, 0.5);
+    width: 50%; /* Set the forum width to half of the page width */
+    margin-top: 3%;
+    margin-left: 25%;
+    text-align: left; /* Align the text inside the forum to the left */
+    color: aliceblue;
+    padding: 20px;
+    border-radius: 8px; /* Optional: if you want rounded corners */
+    color: white; /* Text color */
+ 
+   
+}
+.question {
+    margin-bottom: 20px;
+  
+
+}
+
+.answer-btn {
+    margin-bottom: 10px;
+  
+
+}
+
+.answers {
+    margin-top: 10px;
+
+
+}
+
+.answer {
+
+    padding: 10px;
+    margin-top: 5px;
+    position: relative; /* Establish relative positioning context */
+    background: linear-gradient(to right, rgba(154, 11, 23, 0.7), rgba(8, 0, 0, 0.5));
+
+    /* Adding shadow: offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   
+}
+
+.like-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    position: absolute; /* Position absolutely within the answer div */
+    right: 10px; /* 10px from the right edge of the answer div */
+    bottom: 10px; /* 10px from the bottom edge of the answer div */
+    background-color: rgb(12, 8, 1);
+ border-width: 30px;
+    border-color: blanchedalmond;
+  
+ 
+   
+}
+
+.like-count {
+    margin-left: 5px;
+    font-weight: bold;
+    color: antiquewhite;
+
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 10px;
+    cursor:pointer;
+
+}
+
+#update-btn {
+    position: fixed; /* Fix the position relative to the viewport */
+    right: 80px; /* Distance from the right side of the viewport */
+    bottom: 80px; /* Distance from the bottom of the viewport */
+    z-index: 1000; /* Ensure it's above other elements */
+
+}
+
+#sidebar {
+    position: fixed; /* Fixed position */
+   top:-3%;
+    left: -12%; /* Position from the left */
+
+    height: calc(100vh + 10vh); /* Full height with 10% extra */
+
+
+
+   /* Ensure sidebar is above other content */
+}
+
+.sidebar-image {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensure image covers entire container */
+    transition: transform 0.5s ease; /* Adding smooth transition */
+    filter: drop-shadow(0px 0px 10px rgba(105, 6, 2, 0.5));
+
+}
+.sidebar-image:hover {
+    transform: scale(1.1); /* Applying hover effect - image scales up */
+ 
+}
+
+/* Your existing CSS styles for the forum */
+
+#navbar {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* This ensures space between items */
+   
+}
+
+.nav-icon {
+    font-size: 24px; /* Adjust icon size as needed */
+}
+
+.nav-button {
+    height: 50px;
+    width: 50px;
+   background-color: black;
+    color: white; /* White color for icon */
+    border: none;
+    border-radius: 50%; /* Making the button round */
+    padding: 10px; /* Adjust padding as needed */
+    margin-right: 50px; /* Spacing between buttons */
+    cursor: pointer;
+    text-decoration: none; /* Remove default underline */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+   
+    color: brown;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.dropdown-content a:hover {
+    background-color: #0b0505;
+    color: aliceblue;
+}
+
+.dropdown:hover .dropdown-content {
+ 
+    display: block;
+}
+
+#forum {
+    margin-right: calc(100% + 20px); /* Adjust margin to accommodate the navbar */
+ 
+}
+
+/* Adding Harry Potter related forum title styles */
+.forum-title {
+    text-align: center;
+    font-size: 48px;
+    color:#FFD700;
+    font-family: 'Henny Penny', cursive;
+    margin-top: 30px;
+}
+
+/* Adding hover effect for the forum title */
+.forum-title:hover {
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #E6E6FA, 0 0 40px #E6E6FA;
+}
+
+
+

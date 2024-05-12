@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Merchandise</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estore.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+
+<style>
+    .badge {
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+            padding: 2px 6px;
+            position: absolute; /* Position the badge relative to the cart icon */
+            top: 14%;
+            right: 13%;
+            /* Adjust the badge to be on the top right corner of the cart icon */
+        }
+.row{
+    margin-top: 5%;
+}
+      
+</style>
+</head>
+
+    
+    <nav class="navbar">
+        <div class="container">
+            <img src="Image2/Diagon alley point.png" alt="Diagon Alley" width="350" class="diagon-alley">
+            <span class="navbar-brand mb-0 h1 a" >Harry Potter Store</span>
+            <div class="cart">
+                <i class="fas fa-shopping-cart" style="color: white; font-size: 35px;  position: relative;"></i>
+                 <!-- Badge for cart count -->
+                 <div class="badge" id="cart-count">0</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Right side menu below the navbar -->
+    <div class="right-side-menu">
+        <!-- Home icon -->
+        <a href="home.html" class="home-icon">
+            <i class="fas fa-home"></i>
+        <!-- Burger menu with dropdown content -->
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+            <div class="dropdown-content">
+                <a href="forum.html">Forum</a>
+                <a href="character.html">Characters</a>
+                <a href="quiz.html">PotterQuiz</a>
+                <a href="estore.html">E-Store</a>
+                <a href="index.html">Join Club</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <!-- Row 1 -->
+        <div class="row mar">
+            <!-- Product 1 -->
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="Image2/Map Hoodie.png" alt="Product 1" class="img-fluid product-image">
+                    <h3 class="product-title">Marauder's Map Hoodie</h3>
+                <p class="product-description">A cozy hoodie featuring the iconic Marauder's Map design. Perfect for keeping warm while showcasing your love for the magical world.</p>
+                <p class="product-price">₹1,299</p>
+                <button class="btn btn-primary add-to-cart" data-price="1299">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="Image2/chamber of secrets hoodie.png" alt="Product 2" class="img-fluid product-image">
+                    <h3 class="product-title">Chamber of Secrets Hoodie</h3>
+                    <p class="product-description"> This hoodie is themed after the "Chamber of Secrets," with unique graphics that Harry Potter fans will recognize and appreciate.</p>
+                    <p class="product-price">₹1,099</p>
+                    <button class="btn btn-primary add-to-cart" data-price="1099">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="image2/Hogwarts Express Spirit Jersey.webp" alt="Product 3" class="img-fluid product-image">
+                    <h3 class="product-title">Hogwarts Express Spirit Jersey</h3>
+                    <p class="product-description"> A spirit jersey that captures the essence of the Hogwarts Express. It's a stylish way to celebrate the magical journey to Hogwarts.</p>
+                    <p class="product-price">₹3,299</p>
+                    <button class="btn btn-primary add-to-cart" data-price="3299">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Row 2 -->
+        <div class="row">
+
+             <!-- Product 1 -->
+             <div class="col-md-4">
+                <div class="product">
+                    <img src="Image2/Gryffindor House Spirit Jersey.webp" alt="Product 1" class="img-fluid product-image">
+                    <h3 class="product-title">Gryffindor House Spirit Jersey</h3>
+                <p class="product-description">Show your Gryffindor pride with this spirit jersey. It's perfect for fans who identify with the bravery and chivalry of Gryffindor House.</p>
+                <p class="product-price">₹1,299</p>
+                <button class="btn btn-primary add-to-cart" data-price="1299">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="Image2/Slytherin hoodie.png" alt="Product 2" class="img-fluid product-image">
+                    <h3 class="product-title">Slytherin House Spirit Jersey</h3>
+                    <p class="product-description"> A spirit jersey for those who admire Slytherin House. It's a great way to display your affinity for ambition and cunning.</p>
+                    <p class="product-price">₹1,099</p>
+                    <button class="btn btn-primary add-to-cart" data-price="1099">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="Image2/Represent Ravenclaw House spirit jersey.png" alt="Product 3" class="img-fluid product-image">
+                    <h3 class="product-title">Ravenclaw House Spirit Jersey</h3>
+                    <p class="product-description">Represent Ravenclaw House with this beautifully designed spirit jersey. Ideal for fans who value intelligence and wisdom.</p>
+                    <p class="product-price">₹3,299</p>
+                    <button class="btn btn-primary add-to-cart" data-price="3299">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+         
+    <button class="btn btn-success" id="proceed-to-pay">Proceed to Pay</button>
+
+    <!-- Modal for cart -->
+    <div class="modal" id="cartModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cart Summary</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Items will be added here -->
+                </div>
+                <div class="modal-footer">
+                    <h5 id="total-amount">Total: ₹0</h5>
+                    <button type="button" class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Checkout Modal -->
+      <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkoutModalLabel">Checkout</h5><br>
+                  
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   
+                    
+                    
+                    <!-- Add more payment options here -->
+                </div>
+                <div class="modal-footer">
+                   
+                    <button class="btn btn-primary payment-option">Net Banking</button>
+                    <button class="btn btn-warning payment-option">PhonePe</button>
+                    <button class="btn btn-success payment-option">Google Pay</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    var cart = [];
+    var totalAmount = 0;
+
+    $('.add-to-cart').click(function() {
+        var productName = $(this).siblings('.product-title').text();
+        var productPrice = parseInt($(this).data('price'));
+        cart.push({ productName, productPrice });
+        totalAmount += productPrice;
+        $('#cart-count').text(cart.length);
+    });
+
+    $('#proceed-to-pay').click(function() {
+        if (cart.length === 0) {
+            alert('No items in cart');
+        } else {
+            var cartHtml = '';
+            cart.forEach(function(item) {
+                cartHtml += '<p>' + item.productName + ' - ₹' + item.productPrice + '</p>';
+            });
+            $('#cartModal .modal-body').html(cartHtml);
+            $('#total-amount').text('Total: ₹' + totalAmount);
+            $('#cartModal').modal('show');
+        }
+    });
+
+    // Show the checkout modal when the checkout button is clicked
+    $('.modal-footer .btn-primary').click(function() {
+        $('#cartModal').modal('hide'); // Hide the cart modal
+        $('#checkoutModal').modal('show'); // Then show the checkout modal
+    });
+});
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+.timer-container {
+    position: absolute;
+    top: 310px;
+    right: 10px;
+    font-size: 24px;
+    cursor: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set container height to full viewport height */
+    position: relative; /* Make the container positioned relative so it can contain absolute positioned elements */
+    z-index: 1;
+    cursor: none;
+}
+
+#quiz-content {
+    text-align: center;
+    max-width: 80%; /* Adjust width as needed */
+    cursor: none;
+}
+
+.quiz-question {
+    width: 100%;
+    cursor: none;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: none;
+}
+
+.option {
+    margin: 5px; /* Adjust margin as needed for spacing between buttons */
+    cursor: none;
+}
+
+.timer-container {
+    display: none; /* Hide the timer container by default */
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    font-size: 24px;
+    background: linear-gradient(to right, #3f0d12, #a71d31); /* Dark gradient background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff; /* Text color */
+}
+
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensure the video stays behind other content */
+}
+
+.icon-container {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* This ensures space between items */
+    cursor: none;
+}
+
+.icon-button i, .home-icon a {
+    color: #fff; /* Adjust as needed */
+    background-color: #000; /* Example, adjust as needed */
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+}
+
+/* Ensure dropdown menu appears below the burger icon */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: fixed; /* Adjust if necessary */
+    top: 12%; /* Adjust based on the size of your icons */
+    right: 5%;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: none;
+}

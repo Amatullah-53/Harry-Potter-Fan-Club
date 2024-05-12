@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
+    <style>
+    
+
+#cursor {
+  position: absolute;
+  z-index: 9999;
+  transform: rotate(-12deg);
+  top: 0px;
+  pointer-events: none;
+}
+
+#bgImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+  display: none;
+}
+
+#game-instructions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Harry Potter', sans-serif; /* Use Harry Potter font */
+  color: #fff; /* White color for better readability */
+  font-size: 20px;
+  background: linear-gradient(to right, #5b86e5, #36d1dc); /* Gradient background */
+  padding: 20px; /* Add padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Magical box shadow */
+}
+
+#game-instructions h2 {
+  font-size: 32px; /* Larger font size for heading */
+  margin-bottom: 20px; /* Add some space below the heading */
+}
+
+#game-instructions p {
+  margin-bottom: 10px; /* Add space between paragraphs */
+}
+
+#start-btn {
+    position: absolute;
+    top: calc(50% + 180px); /* Position below instruction manual */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999; /* Set a high z-index value to ensure the button appears on top */
+    background-color: #fff; /* White background */
+    border: 2px solid #000; /* Black border */
+    color: #000; /* Black text color */
+    padding: 10px 20px; /* Padding */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+#start-btn:hover {
+    background-color: #ffd700; /* Yellow background on hover */
+    box-shadow: 0 0 10px #ffd700; /* Glow effect on hover */
+    color: #000; /* Black text color on hover */
+}
+
+    </style>
+</head>
+
+<body>
+
+  <img src="charimages/cursor4.png" id="cursor" alt="" srcset="" />
+
+  <div class="icon-container">
+    <a href="home.html" class="icon-button home-icon"><i class="fas fa-home"></i></a>
+    <!-- Burger Menu Icon -->
+    <div class="icon-button burger-icon" data-toggle="dropdown"><i class="fas fa-bars"></i></div>
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="burgerDropdown">
+        <a class="dropdown-item" href="forum.html">Forum</a>
+        <a class="dropdown-item" href="quiz.html">Quiz</a>
+        <a class="dropdown-item" href="characters.html">characters</a>
+        <a class="dropdown-item" href="estore.html">E-Store</a>
+        <a class="dropdown-item" href="index.html">Join Club</a>
+    </div>
+</div>
+   
+    <img id="bgImage" src="charimages/back.jpg" alt="Harry Potter Poster"> <!-- Harry Potter poster image -->
+
+    <video id="bgVideo" loop muted>
+      <source src="Images/harrybggame.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+
+    <div id="game-instructions">
+        <h2>Welcome to the Harry Potter Quiz!</h2>
+        <p>Instructions:</p>
+        <p>- Answer 10 questions correctly to win the game.</p>
+        <p>- Each question has multiple-choice options.</p>
+        <p>- Click on your chosen answer to proceed.</p>
+        <p>- If you answer correctly, you'll move on to the next question.</p>
+        <p>- If you answer incorrectly, the correct answer will be highlighted, and you'll move on to the next question.</p>
+        <p>- Good luck!</p>
+    </div>
+
+    <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+
+    <div class="container">
+        <div id="timer-container" class="timer-container">
+            <i class="fas fa-clock"></i>
+            <span>Timer</span>
+            <span id="timer" class="timer">01:00</span>
+        </div>
+        <div id="quiz-content"></div>
+    </div>
+
+    <div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="winModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="winModalLabel">Congratulations!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <img src="Images/wins gif.gif" alt="Harry Potter Celebration" style="width: 100%; height: auto;">
+                  <p>You've won the Harry Potter quiz!</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+
+    <!-- Score Display Container, hidden initially -->
+<div id="scoreDisplay" style="display: none; position: absolute; top: 20px; left: 20px; color: white; background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px; ">
+  <div><b>Correct: </b><span id="correct-count"><b>0</b></span></div>
+  <div><b>Incorrect: </b><span id="incorrect-count"><b>0</b></span></div>
+</div>
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="quiz.js"></script>
+    <script src="character.js"></script>
+  
+</body>
+</html>

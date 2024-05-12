@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Homepage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="character.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Harry+P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+   
+
+    
+    
+
+    <img src="charimages/cursor4.png" id="cursor" alt="" srcset="" />
+
+<div class="icon-container">
+    <a href="home.html" class="icon-button home-icon"><i class="fas fa-home"></i></a>
+    <!-- Burger Menu Icon -->
+    <div class="icon-button burger-icon" data-toggle="dropdown"><i class="fas fa-bars"></i></div>
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="burgerDropdown">
+        <a class="dropdown-item" href="forum.html">Forum</a>
+        <a class="dropdown-item" href="quiz.html">Quiz</a>
+        <a class="dropdown-item" href="characters.html">characters</a>
+        <a class="dropdown-item" href="estore.html">E-Store</a>
+        <a class="dropdown-item" href="index.html">Join Club</a>
+    </div>
+</div>
+
+<div class="left-side-content">
+  
+    <p class="fan-club-info">Become a member of the Harry Potter Fan Club and dive into the magical world of Hogwarts, wizards, and fantastic beasts. Get access to exclusive content, behind-the-scenes insights, and connect with fellow Potterheads!</p>
+</div>
+
+
+<div class="join-club-btn-container">
+    <button class="join-club-btn"><b>Join the Fan Club</b></button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="joinClubModal" tabindex="-1" role="dialog" aria-labelledby="joinClubModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="joinClubModalLabel">Join the Harry Potter Fan Club</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <label for="usernameInput">Username:</label>
+            <input type="text" class="form-control" id="usernameInput" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+            <label for="usernameInput">Email:</label>
+            <input type="text" class="form-control" id="email Id" placeholder="Enter Email Id">
+        </div>
+        <div class="form-group">
+            <label for="usernameInput">Mobile Number</label>
+            <input type="text" class="form-control" id="mobile" placeholder="Enter mobile Number">
+        </div>
+        <div class="form-group">
+            <label for="passwordInput">Password:</label>
+            <input type="password" class="form-control" id="passwordInput" placeholder="Enter password">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="getMembershipBtn">Get Membership</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Congratulations Modal -->
+<div class="modal fade" id="congratsModal" tabindex="-1" role="dialog" aria-labelledby="congratsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="congratsModalLabel">Congratulations!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="Images/harry gif.gif" alt="Harry Potter GIF">
+                <p>You are now a member of the Harry Potter Fan Club!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="character.js"></script>
+</body>
+</html>

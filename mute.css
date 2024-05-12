@@ -1,0 +1,12 @@
+#toggle-sound {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#toggle-sound i {
+    font-size: 24px;
+    color: white;
+}

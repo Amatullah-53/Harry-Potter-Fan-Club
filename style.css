@@ -1,0 +1,114 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    cursor: none;
+
+  
+}
+
+
+
+body {
+    background: url(Images/back4.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    cursor: none;
+  
+}
+
+
+
+.icon-container {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* This ensures space between items */
+    cursor: none;
+}
+
+.icon-button i, .home-icon a {
+    color: #fff; /* Adjust as needed */
+    background-color: #000; /* Example, adjust as needed */
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+}
+
+/* Ensure dropdown menu appears below the burger icon */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: fixed; /* Adjust if necessary */
+    top: 12%; /* Adjust based on the size of your icons */
+    right: 5%;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: none;
+}
+
+.join-club-btn-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.join-club-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e5e35b;
+    color: #0b0202;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; /* Add transition effect */
+}
+
+.join-club-btn:hover {
+    box-shadow: 0 0 20px #b5e55b, 0 0 40px #cc9411, 0 0 60px #b9dab3; /* Add glowing effect */
+}
+
+.modal-body img {
+    max-width: 100%; /* Ensure the image fits within the modal */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image horizontally */
+    margin: 0 auto; /* Center the image vertically */
+}
+
+.left-side-content {
+    position: absolute;
+    top: 65%;
+    left: 15%;
+    max-width: 70%; /* Adjust width as needed */
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+.fan-club-info {
+    font-family: 'Harry Potter', sans-serif; /* Use Harry Potter font */
+    font-size: 38px;
+    color:#e6ce12;
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Magical box shadow */
+    font-family: 'Harry P', sans-serif; /* Apply Harry Potter font */
+    transition: transform 0.3s ease; /* Add transition effect for movement */
+    background-image: radial-gradient(circle, rgba(38, 53, 74, 0.7) 0%, rgba(0, 0, 8, 0.7) 100%);
+}
+
+.fan-club-info:hover {
+    transform: translate(0, -10px); /* Move the container up slightly */
+}
+
+.fan-club-info:hover p {
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #E6E6FA, 0 0 40px #E6E6FA;
+}
+
+
+
+
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Harry Potter Forum</title>
+    <link rel="stylesheet" type="text/css" href="forum.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="character.css">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+
+  
+</head>
+<body>
+
+  
+
+    <h1 class="forum-title">Harry Potter Forum</h1>
+  
+    <div id="navbar">
+       
+        <!-- Burger menu using Font Awesome with white color -->
+        <div class="dropdown">
+            <button class="dropbtn nav-button"><i class="fas fa-bars nav-icon"></i></button>
+            <div class="dropdown-content">
+                <!-- Links to other pages -->
+                <a href="characters.html">characters</a>
+                <a href="quiz.html">Potter Quiz</a>
+                <a href="forum.html">Forum</a>
+                <a href="estore.html">E-Store</a>
+                <a href="index.html">Join Club</a>
+            </div>
+        </div>
+
+         <!-- Home icon using Font Awesome with white color -->
+         <a href="home.html" class="nav-button"><i class="fas fa-home nav-icon"></i></a>
+    </div>
+
+
+    </div>
+ 
+    <div id="sidebar">
+        <!-- Your sidebar content goes here -->
+        <img src="Images/her2.png" alt="Hermione Reading" class="sidebar-image"> <!-- Adding Hermione reading image -->
+    </div>
+  
+
+    
+    <div id="forum">
+      
+        <!-- Question 1 -->
+        <div class="question">
+            <h2>What is your favorite Harry Potter spell and why?</h2>
+            <button class="btn btn-warning answer-btn">Answer</button>
+            <div class="answers">
+                <div class="answer">
+                    <p>Expelliarmus because it's versatile and non-lethal.</p>
+                    <button class="btn btn-danger like-btn">👍 <span class="like-count">5</span></button>
+                </div>
+                <div class="answer">
+                    <p>Lumos, as it brings light in the darkest of times.</p>
+                    <button class="btn btn-danger like-btn">👍 <span class="like-count">3</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h2>Which Harry Potter character do you relate to most and why?</h2>
+            <button class="btn btn-warning answer-btn">Answer</button>
+            <div class="answers">
+                <div class="answer">
+                    <p>Hermione Granger for her intelligence and determination.</p>
+                    <button class="btn btn-danger like-btn">👍 <span class="like-count">8</span></button>
+                </div>
+                <div class="answer">
+                    <p>Ron Weasley for his loyalty and sense of humor.</p>
+                    <button class="btn btn-danger like-btn">👍 <span class="like-count">4</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h2>What lessons have you learned from the Harry Potter series?</h2>
+            <button class="btn btn-warning answer-btn">Answer</button>
+            <div class="answers">
+                <div class="answer">
+                    <p>The importance of friendship and bravery in difficult times.</p>
+                    <button class="btn btn-danger like-btn">👍 <span class="like-count">7</span></button>
+                </div>
+                <div class="answer">
+                    <p>That choices define us more than our abilities.</p>
+                    <button class="btn btn-danger like-btn">👍 <span class="like-count">5</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h2>How would you describe the impact of Harry Potter on modern culture?</h2>
+            <button class="btn btn-warning answer-btn">Answer</button>
+            <div class="answers">
+                <div class="answer">
+                    <p>It has inspired a generation to love reading and embrace their differences.</p>
+                    <button class="btn btn-danger like-btn">👍 <span class="like-count">10</span></button>
+                </div>
+                <div class="answer">
+                    <p>Harry Potter has become a symbol of resilience and fighting for what's right.</p>
+                    <button class="btn btn-danger like-btn">👍 <span class="like-count">6</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <button id="update-btn" class="btn btn-light"><b>Update Answers</b></button>
+
+    <script src="forum.js"></script>
+    <script src="character.js"></script>
+</body>
+</html>
+       
